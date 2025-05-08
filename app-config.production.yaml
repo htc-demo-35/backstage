@@ -12,10 +12,15 @@ backend:
       port: ${POSTGRES_PORT}
       user: ${POSTGRES_USER}
       password: ${POSTGRES_PASSWORD}
+  
+  auth:
+    externalAccess:
+      - type: static
+        options:
+          token: "${API_ACCESS_TOKEN}"
+          subject: admin-curl-access
 
 auth:
-  keys:
-    - secret: "${API_ACCESS_TOKEN}"
   providers:
     guest:
       dangerouslyAllowOutsideDevelopment: true
