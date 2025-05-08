@@ -15,7 +15,7 @@ backend:
 
 auth:
   keys:
-    - secret: ${API_ACCESS_TOKEN}
+    - secret: "${API_ACCESS_TOKEN}"
   providers:
     guest:
       dangerouslyAllowOutsideDevelopment: true
