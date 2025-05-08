@@ -14,6 +14,8 @@ backend:
       password: ${POSTGRES_PASSWORD}
 
 auth:
+  keys:
+    - secret: ${API_ACCESS_TOKEN}
   providers:
     guest:
       dangerouslyAllowOutsideDevelopment: true
